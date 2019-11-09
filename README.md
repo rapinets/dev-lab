@@ -1,3 +1,2 @@
 # dev-lab
-##### collaborators: 
-rapinec, artday
+##### collaborators: rapinec, artday
