@@ -59,7 +59,3 @@ class Config extends Singleton {
  */
 $config = Config::getInstance(5, 10);
 //echo $config->get('app.app_name');
-
-
-
-$container->getConfig();
