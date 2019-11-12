@@ -13,6 +13,7 @@ abstract class Singleton {
         return self::$instance;
     }
 
+    //не дозволяємо вводити дані в клієнтському коді і клоніровати класс
     protected function __construct(){}
 
     protected function __clone(){}
