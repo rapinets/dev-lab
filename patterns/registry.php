@@ -2,13 +2,17 @@
 
 class Registry {
 
+    //масив $registry в якому зберігаеться ключ($alias) значення($value)
     private $registry = [];
 
+    //метод set який приймає ключ($alias) значення($value)
     public function set($alias, $value)
     {
+        //якщо немає такого ключа($alias) то присвоємо йому значення($value)
         if (!$this->registry[$alias]){
             $this->registry[$alias] = $value;
         }
+        //вертає об'єкт по ключу($alias)
         return $this->get($alias);
     }
 
