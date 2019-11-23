@@ -2,73 +2,26 @@ body
 {
     padding: 0;
     margin: 0;
+    transition: .5s ease-in-out;
 }
-.aside
-{
-    float: left;
-    display: flex;
-    flex-direction: column;
-    display: none;
-    margin: 0;
-    padding: 0;
-}
-.menu
-{
-    display: block;
-}
-.container
-{
-    background: #218BC3;
-    margin: 0 auto;
-    max-width: 960px;
-    display: flex;
-
-}
-
-.posts
-{
-    display: block;
-    width: 320px;
-}
-
-
-
-nav
-{
-    background: #629755;
-
-}
-
-.menu1
-{
-    padding-left: 0;
-    display: flex;
-    margin: 0 auto;
-    max-width: 960px;
-}
-
-.item
-{
+ul{
     list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+li{
+
+    text-align: center;
     display: block;
-    background: brown;
+    width: 100px;
+    background: darkcyan;
 }
-
-nav li:first-child
-{
-    background: #cc2255;
-}
-
-
-
-nav li:last-child
-{
-    background: #CC7832;
-}
-
 a
 {
     text-decoration: none;
+    color: #f7f7f9;
 }
 
 #post1
@@ -85,34 +38,218 @@ a
 {
     background: #629755;
 }
+.footer{
+    background: #218BC3;
+}
 
-@media (max-width: 640px) {
-    .container
+.aside
+{
+    display: none;
+}
+
+
+.wrapper
+{
+    display: flex;
+    flex-flow: row wrap;
+}
+.header, .main, .footer
+{
+    flex: 1 100%;
+}
+.menu1
+{
+
+    display: flex;
+    flex-flow: row wrap;
+
+}
+.item
+{
+    flex: 1 100%;
+}
+.menu1 .item a{
+    display: block;
+    font-size: 2.5em;
+
+}
+
+@media (min-width: 600px) {
+    .header
     {
-        flex-direction: column;
-
+        display: none;
     }
     .aside
     {
         display: block;
+        margin-right: 5px;
     }
-
-
-
-    #post1
+    .main
     {
-        align-self: flex-end;
+        display: flex;
+        flex-flow: row nowrap;
     }
-
-    #post3
+    .aside, .post-container
     {
-        align-self: flex-end;
+        flex: 1 auto;
     }
-
-    #nav
+    .post-container
     {
-        display: none;
+
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
     }
+    .posts
+    {
+        display: block;
+        width: 270px;
+        margin-right: 15px;
+        margin-bottom: 15px;
+        box-shadow: 10px 5px 4px rgba(0,0,0,.6);
+    }
+    .item
+    {
+        margin-bottom: 5px;
+    }
+}
+@media (min-width: 800px) {
+    .main
+    {
+        max-width: 960px;
+        margin: 50px auto 0 auto;
+    }
+}
+/*
+aside
+{
+
+    width: 100px;
+    margin-right: 5px;
+    float: left;
+
+}
+
+
+.aside
+{
+
+    display: flex;
+    flex-direction: column;
+
+    margin-right: 0;
+
+    margin-top: 0;
+    padding: 0;
+}
+
+.container
+{
+
+    margin: 0 auto;
+    max-width: 960px;
+    display: flex;
 
 
 }
+
+
+
+
+nav
+{
+    background: #218BC3;
+    margin: 0;
+    padding: 0;
+}
+.menu
+{
+    display: block;
+}
+
+
+
+header
+{
+
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0;
+
+}
+#h-menu
+{
+    display: none;
+}
+#v-menu
+{
+    display: none;
+}
+#block-m
+{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.nav-header
+{
+    display: block;
+    margin: 0;
+    padding: 0;
+    max-width: 300px;
+
+}
+#target
+{
+    display: none;
+}
+#target:target
+{
+    display: block;
+}
+
+
+
+
+@media (max-width: 780px) {
+    #h-menu
+    {
+        display: block;
+    }
+    aside
+    {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) {
+    #h-menu
+    {
+        display: none;
+    }
+    #v-menu
+    {
+        display: block;
+    }
+
+}
+
+@media all and (max-width: 420px) {
+   header
+   {
+       width: 100%;
+   }
+    #v-menu
+    {
+        width: 100%;
+    }
+    .posts
+    {
+        width: 100%;
+    }
+}
+
+ */
