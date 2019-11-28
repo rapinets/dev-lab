@@ -2,8 +2,88 @@
 * {
     box-sizing: border-box;
 }
-
 body {
     margin: 0;
     padding: 0;
+    background: #e5e5e5;
+}
+
+/* Layout */
+.container{
+    margin: 0 auto;
+}
+main{
+    padding: 15px;
+    background: #FFFFFF;
+}
+
+/* Posts Cards */
+.cards-list{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card{
+    padding: 10px;
+}
+.card .card-container{
+    border: 1px solid #b1b4b7;
+}
+.card .card-body{
+    padding: 15px;
+}
+.card-image-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.card-image-wrapper img{
+    width: 100%;
+}
+
+/* Responsive Css */
+@media (min-width: 576px) {
+    .container{
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container{
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container{
+        max-width: 960px;
+    }
+    .card{
+        flex: 0 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container{
+        max-width: 1140px;
+    }
+    .card{
+        flex: 0 33.333333%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .card .card-container{
+        display: flex;
+    }
+    .card .card-image-wrapper {
+        flex: 0 0 33%;
+    }
+    .card .card-image-wrapper img{
+        width: unset;
+        height: 100%;
+        position: absolute;
+    }
 }
